@@ -1,0 +1,20 @@
+.courseIntro {
+  background: var(--color-primary-light);
+}
+
+.eyebrow {
+  font-size: var(--size-body);
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: var(--size-hero-title);
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.imageWrap {
+  max-width: 600px;
+  margin: 0 auto;
+}

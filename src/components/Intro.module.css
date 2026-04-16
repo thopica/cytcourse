@@ -1,0 +1,8 @@
+.intro {
+  background: var(--color-white);
+}
+
+.headline {
+  font-size: var(--size-section-title);
+  margin-bottom: 1.5rem;
+}

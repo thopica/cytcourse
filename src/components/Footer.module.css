@@ -1,0 +1,35 @@
+.footer {
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: 2.5rem 1rem;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  font-size: var(--size-small);
+  color: var(--color-footer-text);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-white);
+}
+
+.copy {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}

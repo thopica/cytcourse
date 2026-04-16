@@ -1,0 +1,49 @@
+.bonuses {
+  background: var(--color-white);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageWrap {
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.bonusTitle {
+  font-family: var(--font-heading);
+  font-size: var(--size-subheading);
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .imageWrap {
+    flex: 0 0 200px;
+    margin: 0;
+  }
+
+  .content {
+    flex: 1;
+  }
+}

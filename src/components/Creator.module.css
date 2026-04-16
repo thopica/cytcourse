@@ -1,0 +1,43 @@
+.creator {
+  /* inherits section--alt bg */
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.imageWrap {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imageWrap > * {
+  border-radius: 50%;
+}
+
+.headline {
+  font-size: var(--size-section-title);
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .imageWrap {
+    flex-shrink: 0;
+  }
+}
