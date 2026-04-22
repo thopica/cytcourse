@@ -1,7 +1,7 @@
 .hero {
   padding: var(--section-padding);
   text-align: center;
-  background: var(--color-white);
+  background: var(--color-page-bg);
 }
 
 .inner {
@@ -10,7 +10,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    gap: var(--space-lg);
+  }
 }
 
 .headline {

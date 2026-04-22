@@ -1,8 +1,10 @@
 .intro {
-  background: var(--color-white);
+  background: var(--color-page-bg);
 }
 
 .headline {
   font-size: var(--size-section-title);
-  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
 }

@@ -12,11 +12,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <a href="/" className={styles.logo}>
-          {header.logo ? (
-            <img src={header.logo} alt={siteName} className={styles.logoImg} />
-          ) : (
-            <span className={styles.logoText}>{siteName}</span>
-          )}
+          <span className={styles.logoText}>{siteName}</span>
         </a>
 
         <button

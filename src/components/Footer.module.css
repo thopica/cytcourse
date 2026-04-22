@@ -1,7 +1,13 @@
 .footer {
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
-  padding: 2.5rem 1rem;
+  padding: var(--space-lg) 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: var(--space-lg) 1.5rem;
+  }
 }
 
 .inner {

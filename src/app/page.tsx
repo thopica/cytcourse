@@ -5,6 +5,8 @@ import Creator from "@/components/Creator";
 import CourseIntro from "@/components/CourseIntro";
 import Modules from "@/components/Modules";
 import Bonuses from "@/components/Bonuses";
+import Stacking from "@/components/Stacking";
+import BuyCard from "@/components/BuyCard";
 import Pricing from "@/components/Pricing";
 import Guarantee from "@/components/Guarantee";
 import Faq from "@/components/Faq";
@@ -24,6 +26,12 @@ export default function Home() {
         <Pricing />
         <Guarantee />
         <Bonuses />
+        <Stacking />
+        <section className="section">
+          <div className="container">
+            <BuyCard />
+          </div>
+        </section>
         <Faq />
        
       </main>

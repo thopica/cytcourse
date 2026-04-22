@@ -1,17 +1,20 @@
 .courseIntro {
-  background: var(--color-primary-light);
+  background: transparent;
 }
 
 .eyebrow {
   font-size: var(--size-body);
   color: var(--color-text-light);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
 }
 
 .title {
   font-size: var(--size-hero-title);
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .imageWrap {

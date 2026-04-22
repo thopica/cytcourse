@@ -1,5 +1,5 @@
 .faq {
-  background: var(--color-white);
+  background: var(--color-page-bg);
 }
 
 .list {
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0.75rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -30,9 +30,16 @@
   text-align: left;
   gap: 1rem;
   line-height: 1.4;
+  border-radius: 6px;
+  transition: background 0.15s ease;
 }
 
 .question:hover {
+  background: rgba(30, 58, 95, 0.04);
+  color: var(--color-primary);
+}
+
+.open .question {
   color: var(--color-primary);
 }
 
@@ -52,11 +59,11 @@
 
 .open .answerWrap {
   max-height: 400px;
-  padding-bottom: 1.25rem;
+  padding: 0 0.75rem 1.25rem;
 }
 
 .answer {
   color: var(--color-text);
-  line-height: 1.8;
+  line-height: 1.55;
   margin: 0;
 }

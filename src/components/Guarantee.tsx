@@ -5,16 +5,14 @@ export default function Guarantee() {
   const { guarantee } = siteConfig;
 
   return (
-    <section className={`section section--alt ${styles.guarantee}`}>
+    <section className={`section ${styles.guarantee}`}>
       <div className="container">
         <div className={styles.card}>
-          <div className={styles.badge}>
-            <div className={styles.badgeInner}>
-              <span className={styles.badgePct}>100%</span>
-              <span className={styles.badgeLabel}>MONEY BACK</span>
-              <span className={styles.badgeSub}>GUARANTEE</span>
-            </div>
-          </div>
+          <img
+            src="/images/money-back-guarantee.png"
+            alt="100% money back guaranteed badge"
+            className={styles.badgeImage}
+          />
           <h2 className={styles.headline}>{guarantee.headline}</h2>
           {guarantee.paragraphs.map((p, i) => {
             // Bold the refund sentence

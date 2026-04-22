@@ -4,7 +4,7 @@
 
 export const siteConfig = {
   // ── GLOBAL ──────────────────────────────────────────────
-  siteName: "Epic Paper Dragon",
+  siteName: "CYT Dog Portrait",
   siteUrl: "https://yourdomain.com",
   favicon: "/favicon.ico",
 
@@ -70,8 +70,8 @@ export const siteConfig = {
 
   // ── HERO / ABOVE THE FOLD ──────────────────────────────
   hero: {
-    headline: "Build an Epic Dragon Scene Out of Paper",
-    subheadline: "Even if you've never folded anything before",
+    headline: "Turn a Photo of Your Dog Into a Stunning piece of Art",
+    subheadline: "Using nothing but sunlight and a few simple materials",
     image: "/images/hero.jpg",
     imageAlt: "A woman smiling next to a paper dragon scene with volcano, castle and forest",
     ctaButton: {
@@ -85,9 +85,9 @@ export const siteConfig = {
     id: "intro",
     headline: "Imagine if you could...",
     bullets: [
-      "...build a stunning scene that looks like it came straight out of a storybook — using only your hands and a few sheets of paper",
-      "...make something totally unique without needing any special skills, tools, or artistic background",
-      "...create something so cool your friends won't believe you made it yourself",
+      "...create a stunning portrait of your dog that looks like it came straight out of an art gallery using only sunlight and a few simple materials",
+      "...make something totally unique without needing any artistic skills, a camera, or a creative background",
+      "...create something so beautiful your friends won't believe you made it yourself",
     ],
   },
 
@@ -97,16 +97,21 @@ export const siteConfig = {
     image: "/images/creator.jpg",
     imageAlt: "Michelle smiling at her craft table",
     paragraphs: [
-      "Hi, I'm Michelle! I'm the one behind this dragon scene — and I promise, I didn't start out as some kind of paper-folding wizard.",
-      "I used to look at projects like this and think, \"There's no way I could make that.\"",
-      "But over time, I started experimenting. Just folding, shaping, layering — for fun. And what I discovered was: you don't need to be an artist to build something beautiful.",
+      "Hi, I'm [Name]! I'm the one behind this dog portrait and no, I did not start out as a photographer or an artist of any kind.",
+      "One day I stumbled across something called Cyanotype. An art technique from the 1800s where you literally print images using sunlight. I had never heard of it before and honestly it sounded too good to be true.",
+      "So I tried it. Just mixing, coating, exposing out of pure curiosity.",
+      "And the moment I rinsed my first print and watched that deep blue portrait appear right in front of my eyes I was completely hooked.",
+      "That feeling of seeing something you created with your own hands emerge from a sheet of paper is unlike anything else.",
+      "And what I discovered was: you don't need any artistic skill to create something that looks genuinely stunning.",
+      "That's exactly why I created this course. To give any dog owner a simple way to turn a photo of their dog into a beautiful piece of art they will want to hang on their wall forever.",
+      "If you've ever looked at a piece of handmade art and thought \"I could never make that\" you are in exactly the right place.",
     ],
   },
 
   // ── COURSE INTRO ───────────────────────────────────────
   courseIntro: {
     headline: "Introducing...",
-    title: "The Epic Paper Dragon Course",
+    title: "The Sunlight Dog Portrait Course",
     image: "/images/course-devices.jpg",
     imageAlt: "Course displayed on laptop, tablet and phone",
   },
@@ -118,53 +123,61 @@ export const siteConfig = {
     items: [
       {
         title: "Module 1: Materials & Tools",
-        subtitle: "Everything you'll need to start building the scene.",
+        subtitle: "You probably already have half of this at home.",
         bullets: [
-          "Learn which types of paper actually help your folds — and which ones fight back",
-          "The sneaky paper that works just as well as fancy craft sheets — and you probably already have it at home",
-          "A surprising trick to make lava look molten using only cheap gold wrapping paper",
-          "A ruler and glue stick will be your best friends. Here's exactly when to use them (and when to skip).",
-          "How to turn even a small kitchen table into a fold-friendly workspace in 2 minutes",
+          "The complete materials list. Everything fits in a shoebox (yes, really)",
+          "The one specialist item you need to order online and exactly where to get it",
+          "The foam brush trick that makes coating your paper effortless",
+          "How to get your transparency printed even without a printer at home",
+          "How to turn any kitchen table into your own printing studio in under 5 minutes",
         ],
         image: "/images/module1.jpg",
       },
       {
-        title: "Module 2: Building the Base Scene",
-        subtitle: "Lay the foundation for your entire dragon world.",
+        title: "Module 2: Choose & Prepare Your Photo",
+        subtitle: "The right photo makes all the difference. Here is how to pick a great one.",
         bullets: [
-          "Build a rock-solid base that holds every element in place",
-          "Shape a volcano that actually looks rugged and real",
-          "Create a lava flow that pops with color and depth",
+          "The three things that make a dog photo work beautifully as a cyanotype portrait",
+          "How to take a new photo of your dog today that is perfect for printing",
+          "The free online tool that converts your photo into a print-ready negative in under a minute",
+          "How to get the perfect size and proportions for your paper",
+          "A quick checklist to confirm your negative is ready before you print",
         ],
         image: "/images/module2.jpg",
       },
       {
-        title: "Module 3: Adding the Castle & Fantasy Backdrop",
-        subtitle: "Turn your scene into a full fantasy world.",
+        title: "Module 3: Coat & Dry",
+        subtitle: "This is where your paper comes to life. It is easier than it sounds.",
         bullets: [
-          "Fold a storybook castle with turrets, walls, and a gate",
-          "Build a layered sky backdrop with clouds",
-          "Add depth with a mountain range silhouette",
+          "How to mix your cyanotype solution correctly in under 2 minutes",
+          "The simple brushing technique that gives you an even coat every single time",
+          "How to dry your coated paper properly so it is ready to print",
+          "The one thing to avoid while your paper is drying (it is easier than you think)",
+          "How to know your paper is perfectly ready before you move to the next step",
         ],
         image: "/images/module3.jpg",
       },
       {
-        title: "Module 4: Crafting the Forest",
-        subtitle: "Surround your scene with lush greenery.",
+        title: "Module 4: Print With Light",
+        subtitle: "This is the moment the magic happens. All you need is sunlight.",
         bullets: [
-          "Create 3D pine trees in multiple sizes",
-          "Place them for maximum visual impact",
-          "Add ground cover details that tie the scene together",
+          "How to set up your paper and negative for a sharp, detailed exposure",
+          "The simple trick to know exactly how long to leave it in the sun",
+          "What your print should look like after exposure so you know it worked",
+          "How to read the light on cloudy days and still get a beautiful result",
+          "The most satisfying part of the whole process. You will want to do this again immediately",
         ],
         image: "/images/module4.jpg",
       },
       {
-        title: "Module 5: Building the Dragon",
-        subtitle: "The grand finale — your showpiece.",
+        title: "Module 5: Reveal, Dry & Frame",
+        subtitle: "The portrait of your dog appears right in front of your eyes. Here is how to finish it beautifully.",
         bullets: [
-          "Fold a fierce paper dragon step by step",
-          "Shape wings, claws, and a tail with realistic curves",
-          "Position your dragon for maximum dramatic effect",
+          "How to rinse your print and watch the portrait reveal itself in real time",
+          "The drying technique that keeps your paper flat and frame-ready",
+          "How to pick the right frame to make your portrait look like a piece of gallery art",
+          "A simple finishing trick that deepens the blue and sharpens the final result",
+          "How to photograph your finished portrait so it looks stunning on social media",
         ],
         image: "/images/module5.jpg",
       },
@@ -173,16 +186,18 @@ export const siteConfig = {
 
   // ── STACKING / WHAT YOU GET ────────────────────────────
   stacking: {
+    id: "stacking",
     headline: "This is everything you are getting:",
     image: "/images/stacking-devices.jpg",
-    imageAlt: "Course on multiple devices",
+    imageAlt: "Everything included in the course",
     items: [
-      "Lifetime Access to The Epic Paper Dragon Course",
+      "Lifetime Access to The Sunlight Dog Portrait Course",
       "Module 1: Materials & Tools",
-      "Module 2: Building the Base Scene",
-      "Module 3: Adding the Castle & Fantasy Backdrop",
-      "Module 4: Crafting the Forest",
-      "Module 5: Building the Dragon",
+      "Module 2: Choose & Prepare Your Photo",
+      "Module 3: Coat & Dry",
+      "Module 4: Print With Light",
+      "Module 5: Reveal, Dry & Frame",
+      "Bonus: The Free Dog Portrait Converter",
     ],
   },
 
@@ -226,6 +241,8 @@ export const siteConfig = {
       "And I want you to get results...",
       "So I'll be giving you the course for a fraction of that price. Just for me to see if I can actually handle getting support tickets from 100 people. If I can then I'll just start selling it for $97.",
       "But right now — I'm selling it for",
+      "It’s a one-time payment.",
+      "Access to the course - forever.",
     ],
     originalPrice: "$97",
     currentPrice: "$47",

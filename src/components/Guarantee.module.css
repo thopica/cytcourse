@@ -1,5 +1,5 @@
 .guarantee {
-  /* inherits section--alt */
+  background: transparent;
 }
 
 .card {
@@ -7,62 +7,35 @@
   margin: 0 auto;
   text-align: center;
   background: var(--color-white);
-  border: 2px dashed var(--color-primary);
   border-radius: var(--border-radius);
-  padding: 2.5rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  padding: var(--space-lg) var(--space-md);
 }
 
-.badge {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #D4380D, #FAAD14);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 768px) {
+  .card {
+    padding: var(--space-lg);
+  }
 }
 
-.badgeInner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--color-white);
-  line-height: 1.1;
-}
-
-.badgePct {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.badgeLabel {
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.badgeSub {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--color-black);
-  padding: 0.1rem 0.4rem;
-  margin-top: 2px;
-  border-radius: 2px;
+.badgeImage {
+  width: min(100%, 196px);
+  height: auto;
+  margin: 0 auto var(--space-md);
 }
 
 .headline {
   font-size: var(--size-section-title);
-  margin-bottom: 1rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
 }
 
 .card p {
   color: var(--color-text);
-  line-height: 1.8;
+  line-height: 1.55;
   max-width: 420px;
+  text-align: left;
+  padding: 0 0.5rem;
   margin-left: auto;
   margin-right: auto;
 }

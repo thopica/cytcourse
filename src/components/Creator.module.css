@@ -5,7 +5,7 @@
 .inner {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-lg);
   align-items: center;
 }
 
@@ -22,19 +22,21 @@
 
 .headline {
   font-size: var(--size-section-title);
-  margin-bottom: 1rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
 }
 
 .content p {
   color: var(--color-text);
-  line-height: 1.8;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 768px) {
   .inner {
     flex-direction: row;
     align-items: flex-start;
-    gap: 3rem;
+    gap: var(--space-xl);
   }
 
   .imageWrap {

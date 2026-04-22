@@ -12,11 +12,11 @@ export default function Modules() {
         <div className={styles.list}>
           {modules.items.map((mod, i) => (
             <div key={i} className={styles.module}>
-              <div className={styles.content}>
-                <h3 className={styles.modTitle}>{mod.title}</h3>
-                <div className={styles.imageWrap}>
+              <h3 className={styles.modTitle}>{mod.title}</h3>
+              <div className={styles.imageWrap}>
                 <PlaceholderImage label={mod.title} />
               </div>
+              <div className={styles.content}>
                 <p className={styles.modSub}>{mod.subtitle}</p>
                 <ul className="check-list">
                   {mod.bullets.map((b, j) => (
@@ -24,7 +24,6 @@ export default function Modules() {
                   ))}
                 </ul>
               </div>
-              
             </div>
           ))}
         </div>

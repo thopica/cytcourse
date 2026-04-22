@@ -1,0 +1,22 @@
+.stacking {
+  background: transparent;
+}
+
+.headline {
+  font-size: var(--size-section-title);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.imageWrap {
+  max-width: 600px;
+  margin: 0 auto var(--space-lg);
+}
+
+.list {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: var(--size-subheading);
+  font-weight: 500;
+}
