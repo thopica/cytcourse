@@ -13,12 +13,6 @@
   gap: var(--space-md);
 }
 
-@media (min-width: 768px) {
-  .inner {
-    gap: var(--space-lg);
-  }
-}
-
 .headline {
   font-size: var(--size-hero-title);
   color: var(--color-primary);
@@ -36,4 +30,26 @@
   max-width: 500px;
   border-radius: var(--border-radius);
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    max-width: 1180px;
+    gap: var(--space-lg);
+  }
+
+  .headline {
+    max-width: none;
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  .sub {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .imageWrap {
+    max-width: 820px;
+  }
 }
