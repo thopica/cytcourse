@@ -8,11 +8,11 @@ export default function Creator() {
   return (
     <section className={`section section--alt ${styles.creator}`}>
       <div className={`container ${styles.inner}`}>
+        <h2 className={styles.headline}>{creator.headline}</h2>
         <div className={styles.imageWrap}>
           <PlaceholderImage label="Creator Photo" aspect="square" />
         </div>
         <div className={styles.content}>
-          <h2 className={styles.headline}>{creator.headline}</h2>
           {creator.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
