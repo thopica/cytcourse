@@ -299,13 +299,11 @@ export const siteConfig = {
 
   // ── FOOTER ─────────────────────────────────────────────
   footer: {
-    copyright: "© 2026 Epic Paper Dragon. All rights reserved.",
+    copyright: "© 2026 CYT Dog Portrait. All rights reserved.",
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "Refund Policy", href: "/refund" },
       { label: "Impressum", href: "/impressum" },
-      { label: "Contact", href: "mailto:hello@yourdomain.com" },
     ],
   },
 
