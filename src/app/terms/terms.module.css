@@ -1,0 +1,112 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-page-bg);
+}
+
+.header {
+  background: var(--color-footer-bg);
+  padding: 1rem 1.5rem;
+}
+
+.headerInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.backLink {
+  color: var(--color-footer-text);
+  font-size: var(--size-small);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.15s ease;
+}
+
+.backLink:hover {
+  color: var(--color-white);
+}
+
+.siteName {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.title {
+  font-size: var(--size-section-title);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  font-size: var(--size-small);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-md);
+}
+
+.businessInfo {
+  background: var(--color-primary-light);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
+  font-size: var(--size-small);
+  color: var(--color-text);
+  line-height: 1.9;
+}
+
+.intro {
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-light);
+}
+
+.section {
+  margin-bottom: var(--space-lg);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--size-subheading);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.body {
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.body p {
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.list li {
+  margin-bottom: 0.25rem;
+}
+
+.footer {
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: var(--size-small);
+}
