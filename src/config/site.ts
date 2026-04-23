@@ -241,6 +241,7 @@ export const siteConfig = {
       "And I want you to get results...",
       "So I'll be giving you the course for a fraction of that price. Just for me to see if I can actually handle getting support tickets from 100 people. If I can then I'll just start selling it for $97.",
       "But right now — I'm selling it for",
+      "$49.00",
       "It’s a one-time payment.",
       "Access to the course - forever.",
     ],
