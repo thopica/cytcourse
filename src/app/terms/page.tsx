@@ -23,11 +23,7 @@ export default function TermsPage() {
         <h1 className={styles.title}>Terms &amp; Conditions</h1>
         <p className={styles.meta}>Last updated: 23.04.2026</p>
 
-        <div className={styles.businessInfo}>
-          <strong>Business Name:</strong> Meister Online Services<br />
-          <strong>Support Email:</strong> thomasmeister6@gmail.com<br />
-          <strong>Country of Governing Law:</strong> Switzerland
-        </div>
+     
 
         <p className={styles.intro}>
           These Terms &amp; Conditions (&ldquo;Agreement&rdquo;) govern the purchase and use of
