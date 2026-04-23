@@ -123,6 +123,12 @@ p {
   margin-bottom: var(--space-sm);
 }
 
+.section strong,
+.section b {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
 /* ── LAYOUT UTILITIES ──────────────────────────────────── */
 .container {
   width: 100%;

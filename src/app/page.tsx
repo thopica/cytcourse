@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
+import ProblemDigIn from "@/components/ProblemDigIn";
 import Creator from "@/components/Creator";
 import CourseIntro from "@/components/CourseIntro";
 import Modules from "@/components/Modules";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <Intro />
+        <ProblemDigIn />
         <Creator />
         <CourseIntro />
         <Modules />

@@ -91,6 +91,26 @@ export const siteConfig = {
     ],
   },
 
+  // ── PROBLEM DIG-IN ──────────────────────────────────────
+  problemDigIn: {
+    id: "problem-dig-in",
+    headline: "Why anyone can create a stunning dog portrait (yes, even on the first try):",
+    
+      
+    paragraphs: [
+      "Let's be honest. At first glance, a portrait like this might look intimidating. Too artistic, too technical for a beginner. But in fact...",
+      "It's surprisingly simple. Cyanotype is an art form from the 1800s that uses sunlight to create deep blue images on paper, fabric, or almost any surface.",
+      "The materials are easy. Everything you need is on Amazon or in any craft store. Most of it you probably already have at home.",
+      "A free tool makes your photo print-ready in under a minute.",
+      "The process is always the same. Learn it once, repeat it with any photo, any size, any time.",
+    ],
+    closingLines: [
+      "You don't need to be artistic.",
+      "You don't need to be technical.",
+      "You just need to start.",
+    ],
+  },
+
   // ── CREATOR BIO ────────────────────────────────────────
   creator: {
     headline: "Let me introduce myself:",

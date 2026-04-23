@@ -1,0 +1,25 @@
+.section {
+  background: transparent;
+}
+
+.inner {
+  max-width: 820px;
+}
+
+.content {
+  color: var(--color-text-light);
+}
+
+.content p {
+  margin-bottom: var(--space-sm);
+}
+
+.closing {
+  margin-top: var(--space-md);
+}
+
+.closing p {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
