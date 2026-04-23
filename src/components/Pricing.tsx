@@ -12,6 +12,7 @@ export default function Pricing() {
         <div className={styles.copy}>
           {pricing.paragraphs.map((p, i) => {
             if (i === 1) return <p key={i} className={styles.bold}>{p}</p>;
+            if (i === 6) return <p key={i} className={styles.priceCallout}>{p}</p>;
             return <p key={i}>{p}</p>;
           })}
         </div>
