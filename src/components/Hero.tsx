@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
 import styles from "./Hero.module.css";
-import PlaceholderImage from "./PlaceholderImage";
 
 export default function Hero() {
   const { hero } = siteConfig;
@@ -11,9 +10,8 @@ export default function Hero() {
         <h1 className={styles.headline}>{hero.headline}</h1>
         <p className={styles.sub}>{hero.subheadline}</p>
         <div className={styles.imageWrap}>
-          <PlaceholderImage label="Hero Image" aspect="landscape" />
+          <img src={hero.image} alt={hero.imageAlt} />
         </div>
-        
       </div>
     </section>
   );
