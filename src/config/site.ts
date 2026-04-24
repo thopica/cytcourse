@@ -115,16 +115,16 @@ export const siteConfig = {
   creator: {
     headline: "Let me introduce myself:",
     image: "/images/creator.jpg",
-    imageAlt: "Michelle smiling at her craft table",
+    imageAlt: "Thomas smiling at his dog portrait",
     paragraphs: [
-      "Hi, I'm [Name]! I'm the one behind this dog portrait and no, I did not start out as a photographer or an artist of any kind.",
-      "One day I stumbled across something called Cyanotype. An art technique from the 1800s where you literally print images using sunlight. I had never heard of it before and honestly it sounded too good to be true.",
+      "Hi, I'm Thomas! I'm the one behind this dog portrait and no, I did not start out as a photographer or an artist of any kind.",
+      "One day I stumbled across something called Cyanotype. An art technique from the 1800s where you literally print images using sunlight.",
       "So I tried it. Just mixing, coating, exposing out of pure curiosity.",
       "And the moment I rinsed my first print and watched that deep blue portrait appear right in front of my eyes I was completely hooked.",
       "That feeling of seeing something you created with your own hands emerge from a sheet of paper is unlike anything else.",
       "And what I discovered was: you don't need any artistic skill to create something that looks genuinely stunning.",
-      "That's exactly why I created this course. To give any dog owner a simple way to turn a photo of their dog into a beautiful piece of art they will want to hang on their wall forever.",
-      "If you've ever looked at a piece of handmade art and thought \"I could never make that\" you are in exactly the right place.",
+      "That's why this piece came to life. A way for dog lovers to capture everything they feel about their dog in one stunning portrait.",
+      "If you've ever wanted to slow down and make something beautiful with your own hands, you've found the right spot.",
     ],
   },
 
