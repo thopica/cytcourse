@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 import styles from "./Creator.module.css";
-import PlaceholderImage from "./PlaceholderImage";
+
 
 export default function Creator() {
   const { creator } = siteConfig;
@@ -10,7 +10,7 @@ export default function Creator() {
       <div className={`container ${styles.inner}`}>
         <h2 className={styles.headline}>{creator.headline}</h2>
         <div className={styles.imageWrap}>
-          <PlaceholderImage label="Creator Photo" aspect="square" />
+          <img src={creator.image} alt={creator.imageAlt} />
         </div>
         <div className={styles.content}>
           {creator.paragraphs.map((p, i) => (
