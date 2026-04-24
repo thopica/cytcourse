@@ -8,7 +8,6 @@ export default function ProblemDigIn() {
     <section id={problemDigIn.id} className={`section section--alt ${styles.section}`}>
       <div className={`container ${styles.inner}`}>
         <h2 className="section__title">{problemDigIn.headline}</h2>
-        <h3 className={styles.subheadline}>{problemDigIn.subheadline}</h3>
 
         <div className={styles.content}>
           {problemDigIn.paragraphs.map((paragraph, i) => {
