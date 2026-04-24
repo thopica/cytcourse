@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
 import styles from "./CourseIntro.module.css";
-import PlaceholderImage from "./PlaceholderImage";
 
 export default function CourseIntro() {
   const { courseIntro } = siteConfig;
@@ -11,7 +10,7 @@ export default function CourseIntro() {
         <p className={styles.eyebrow}>{courseIntro.headline}</p>
         <h2 className={styles.title}>{courseIntro.title}</h2>
         <div className={styles.imageWrap}>
-          <PlaceholderImage label="Course on Devices" />
+          <img src={courseIntro.image} alt={courseIntro.imageAlt} />
         </div>
       </div>
     </section>
