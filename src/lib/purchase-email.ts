@@ -15,29 +15,21 @@ function escapeHtml(value: string) {
 }
 
 export function buildPurchaseEmail({ customerEmail, customerName }: PurchaseEmailInput) {
-  const supportEmail = process.env.SUPPORT_EMAIL || "support@cytcourse.com";
   const logoUrl = process.env.NEXT_PUBLIC_LOGO_URL || "";
-  const productName = siteConfig.stripe.productName;
   const safeName = customerName ? escapeHtml(customerName) : "there";
-  const safeCustomerEmail = escapeHtml(customerEmail);
-  const safeSupportEmail = escapeHtml(supportEmail);
-  const safeProductName = escapeHtml(productName);
   const primary = siteConfig.theme.colors.primary;
   const text = siteConfig.theme.colors.text;
 
-  const subject = `Your access instructions for ${productName}`;
+  const subject = "About your Sunlight Dog Portrait Course purchase";
   const textBody = [
     `Hi ${customerName || "there"},`,
     "",
-    `Thanks so much for joining ${productName}.`,
-    "Your payment was successful and your access instructions are below:",
-    "1) Save this email so you can find it later.",
-    "2) Reply to this email if you need support.",
+    "I saw that you just purchased the Sunlight Dog Portrait Course. I'm so sorry but the product is not ready yet. Didn't expect for anyone to buy so quickly. I was just testing some stuff.",
     "",
-    `If you need help, contact us at ${supportEmail}.`,
+    "Once again, I want to apologize and offer a full refund right now if you'd prefer that. Alternatively, I can hold your spot and just give you access to the product the moment it's ready.",
     "",
-    "Welcome in.",
-    `${siteConfig.siteName}`,
+    "Sorry again.",
+    "Thomas",
   ].join("\n");
 
   const html = `
@@ -47,7 +39,7 @@ export function buildPurchaseEmail({ customerEmail, customerName }: PurchaseEmai
           <td style="padding: 28px 28px 12px;">
             ${logoUrl ? `<img src="${escapeHtml(logoUrl)}" alt="${escapeHtml(siteConfig.siteName)}" style="max-height: 48px; margin-bottom: 16px;" />` : ""}
             <h1 style="margin: 0; color: ${primary}; font-size: 24px; line-height: 1.3;">
-              You're in. Welcome to ${safeProductName}
+              About your purchase
             </h1>
           </td>
         </tr>
@@ -55,22 +47,12 @@ export function buildPurchaseEmail({ customerEmail, customerName }: PurchaseEmai
           <td style="padding: 8px 28px 0; color: ${text}; font-size: 16px; line-height: 1.6;">
             <p style="margin: 0 0 12px;">Hi ${safeName},</p>
             <p style="margin: 0 0 12px;">
-              Thank you so much for your trust. Your payment was successful for <strong>${safeProductName}</strong>.
+              I saw that you just purchased the Sunlight Dog Portrait Course. I'm so sorry but the product is not ready yet. Didn't expect for anyone to buy so quickly. I was just testing some stuff.
             </p>
             <p style="margin: 0 0 12px;">
-              This confirmation was sent to <strong>${safeCustomerEmail}</strong>.
+              Once again, I want to apologize and offer a full refund right now if you'd prefer that. Alternatively, I can hold your spot and just give you access to the product the moment it's ready.
             </p>
-            <p style="margin: 0 0 12px;">
-              Next steps:
-            </p>
-            <ol style="margin: 0 0 16px; padding-left: 20px;">
-              <li>Save this email so you can find your purchase details quickly.</li>
-              <li>Reply to this email if you need support or have any questions.</li>
-            </ol>
-            <p style="margin: 0 0 12px;">
-              Need help? Contact us anytime at <a href="mailto:${safeSupportEmail}" style="color: ${primary};">${safeSupportEmail}</a>.
-            </p>
-            <p style="margin: 20px 0 0;">Welcome in,<br />${escapeHtml(siteConfig.siteName)}</p>
+            <p style="margin: 20px 0 0;">Sorry again,<br />Thomas</p>
           </td>
         </tr>
       </table>
