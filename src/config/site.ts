@@ -5,7 +5,7 @@
 export const siteConfig = {
   // ── GLOBAL ──────────────────────────────────────────────
   siteName: "CYT Dog Portrait",
-  siteUrl: "https://yourdomain.com",
+  siteUrl: "https://cytcourse.com",
   favicon: "/favicon.ico",
 
   // ── DESIGN TOKENS ──────────────────────────────────────
@@ -332,7 +332,7 @@ export const siteConfig = {
     // Price in cents
     priceAmount: 4700,
     currency: "usd",
-    productName: "The Epic Paper Dragon Course",
+    productName: "The Sunlight Dog Portrait Course",
     successUrl: "/success",
     cancelUrl: "/",
   },

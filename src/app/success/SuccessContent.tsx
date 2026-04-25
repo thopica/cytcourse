@@ -93,9 +93,12 @@ export default function SuccessContent() {
         {error ? <p className={`${styles.text} ${styles.error}`}>{error}</p> : null}
         {!loading && !error && isPaid ? (
           <p className={styles.text}>
-            Thank you for purchasing <strong>{siteConfig.stripe.productName}</strong>. Check your
-            email{session?.customer_email ? ` (${session.customer_email})` : ""} for login details
-            and instant access to all course materials.
+            Thank you so much for your trust and welcome in. Your payment for{" "}
+            <strong>{siteConfig.stripe.productName}</strong> is confirmed. We just sent your
+            next-step instructions to your email
+            {session?.customer_email ? ` (${session.customer_email})` : ""}. Please check your
+            inbox in the next few minutes. If you do not see it, check spam or promotions, then
+            return here if you still need help.
           </p>
         ) : null}
         {!loading && !error && !isPaid ? (

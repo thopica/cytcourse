@@ -18,24 +18,32 @@ export async function POST() {
   try {
     const stripe = getStripeClient();
     const { stripe: stripeConfig } = siteConfig;
+    const stripePriceId = process.env.STRIPE_PRICE_ID;
     const baseSuccessUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${stripeConfig.successUrl}`;
     const separator = baseSuccessUrl.includes("?") ? "&" : "?";
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
-      line_items: [
-        {
-          price_data: {
-            currency: stripeConfig.currency,
-            product_data: {
-              name: stripeConfig.productName,
+      line_items: stripePriceId
+        ? [
+            {
+              price: stripePriceId,
+              quantity: 1,
             },
-            unit_amount: stripeConfig.priceAmount,
-          },
-          quantity: 1,
-        },
-      ],
+          ]
+        : [
+            {
+              price_data: {
+                currency: stripeConfig.currency,
+                product_data: {
+                  name: stripeConfig.productName,
+                },
+                unit_amount: stripeConfig.priceAmount,
+              },
+              quantity: 1,
+            },
+          ],
       success_url: `${baseSuccessUrl}${separator}session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL}${stripeConfig.cancelUrl}`,
     });

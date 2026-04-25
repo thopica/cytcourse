@@ -52,6 +52,12 @@ npx vercel
 **Environment variables to set in Vercel Dashboard:**
 - `STRIPE_SECRET_KEY` — your live Stripe secret key (`sk_live_...`)
 - `NEXT_PUBLIC_SITE_URL` — your production URL (e.g. `https://yourdomain.com`)
+- `STRIPE_PRICE_ID` — your Stripe price ID (`price_...`, optional but recommended)
+- `STRIPE_WEBHOOK_SECRET` — Stripe webhook signing secret (`whsec_...`)
+- `RESEND_API_KEY` — Resend API key (`re_...`)
+- `RESEND_FROM_EMAIL` — sender identity (e.g. `CYT Course <hello@cytcourse.com>`)
+- `RESEND_REPLY_TO` — support inbox (e.g. `support@cytcourse.com`)
+- `SUPPORT_EMAIL` — shown in the instruction email body
 
 ## Project Structure
 
@@ -89,4 +95,27 @@ src/
 3. Use `sk_test_...` for development, `sk_live_...` for production
 4. Set `STRIPE_SECRET_KEY` in `.env.local` (local) and Vercel (production)
 5. Set `NEXT_PUBLIC_SITE_URL` to your domain
-6. Test a purchase with Stripe test card: `4242 4242 4242 4242`
+6. (Recommended) Set `STRIPE_PRICE_ID` to use a Stripe dashboard product/price
+7. Test a purchase with Stripe test card: `4242 4242 4242 4242`
+
+## Post-purchase instruction email (Stripe + Resend)
+
+This app sends a custom instruction email after payment succeeds.
+
+Flow:
+1. Stripe emits `checkout.session.completed`
+2. Stripe webhook hits `POST /api/stripe/webhook`
+3. The app sends a transactional email via Resend
+
+Stripe webhook setup:
+1. Stripe Dashboard -> Developers -> Webhooks -> Add endpoint
+2. Endpoint URL: `https://yourdomain.com/api/stripe/webhook`
+3. Listen to event: `checkout.session.completed`
+4. Copy signing secret (`whsec_...`) into `STRIPE_WEBHOOK_SECRET`
+
+Resend setup:
+1. Create account at [resend.com](https://resend.com)
+2. Add and verify your domain (`cytcourse.com`)
+3. Add DNS records shown by Resend (SPF + DKIM, and DMARC recommended)
+4. Create an API key and set `RESEND_API_KEY`
+5. Set `RESEND_FROM_EMAIL` to a verified sender, e.g. `CYT Course <hello@cytcourse.com>`
