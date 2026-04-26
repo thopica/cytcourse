@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
 import styles from "./Modules.module.css";
-import PlaceholderImage from "./PlaceholderImage";
 
 export default function Modules() {
   const { modules } = siteConfig;
@@ -14,7 +13,7 @@ export default function Modules() {
             <div key={i} className={styles.module}>
               <h3 className={styles.modTitle}>{mod.title}</h3>
               <div className={styles.imageWrap}>
-                <PlaceholderImage label={mod.title} />
+                <img src={mod.image} alt={mod.title} />
               </div>
               <div className={styles.content}>
                 <p className={styles.modSub}>{mod.subtitle}</p>
