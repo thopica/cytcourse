@@ -159,7 +159,6 @@ export const siteConfig = {
         bullets: [
           "The three things that make a dog photo work beautifully as a cyanotype portrait",
           "How to take a new photo of your dog today that is perfect for printing",
-          "The free online tool that converts your photo into a print-ready negative in under a minute",
           "How to get the perfect size and proportions for your paper",
           "A quick checklist to confirm your negative is ready before you print",
         ],
