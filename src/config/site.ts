@@ -226,24 +226,26 @@ export const siteConfig = {
     headline: "Bonuses When You Join Today",
     items: [
       {
-        title: "Bonus 1: Wizard Companion",
+        title: "Bonus 1: The Free Photo Converter Tool",
         description:
-          "Build a tiny wizard character that fits perfectly into your final scene — perched near the volcano, hiding behind trees, or watching over the castle.",
+          "Skip the most technical part of the entire process. Upload any photo of your dog and get back a print-ready image in under a minute.",
         bullets: [
-          "See how to fold the wizard from a single sheet — complete with hat, robe, and staff",
-          "Create a sturdy paper base that helps your wizard stand tall",
-          "Try the optional \"cloak twist\" move — a secret step that makes his robes look like they're caught in a breeze",
+          "Upload any photo straight from your phone or laptop",
+          "Watch your photo transform into a perfectly prepared print-ready version automatically",
+          "Download instantly and send straight to your printer or local print shop",
         ],
         image: "/images/bonus-wizard.jpg",
       },
       {
-        title: "Bonus 2: Element Guide",
+        title: "Bonus 2: The Perfect Photo Guide",
         description:
-          "A printable reference sheet with fold patterns for every scene element.",
+          "A short PDF guide showing exactly how to pick or take the perfect photo of your dog for a stunning print every time.",
         bullets: [
-          "Quick-reference diagrams for all folds",
-          "Paper selection cheatsheet",
-          "Troubleshooting common mistakes",
+          "The 3 things that make a dog photo work beautifully as a portrait",
+          "How to take a new photo of your dog at home in under 5 minutes",
+          "Simple lighting tricks that turn an ordinary photo into a perfect one",
+          "What to look for in your existing photos so you know which ones will work",
+          "The one thing to avoid that most beginners miss",
         ],
         image: "/images/bonus-guide.jpg",
       },
