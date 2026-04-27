@@ -19,7 +19,7 @@
 }
 
 .badgeImage {
-  width: min(100%, 196px);
+  width: min(100%, 137px);
   height: auto;
   margin: 0 auto var(--space-md);
 }
