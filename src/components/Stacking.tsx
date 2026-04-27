@@ -14,7 +14,10 @@ export default function Stacking() {
         </div>
         <ul className={`check-list ${styles.list}`}>
           {stacking.items.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}>
+              <strong>{item.bold}</strong>
+              {item.text}
+            </li>
           ))}
         </ul>
       </div>
