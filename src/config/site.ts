@@ -216,7 +216,8 @@ export const siteConfig = {
       { bold: "Module 3:", text: " Coat & Dry" },
       { bold: "Module 4:", text: " Print With Light" },
       { bold: "Module 5:", text: " Reveal, Dry & Frame" },
-      { bold: "Bonus:", text: " The Free Dog Portrait Converter" },
+      { bold: "Bonus 1:", text: " The Free Photo Converter Tool" },
+      { bold: "Bonus 2:", text: " The Perfect Photo Guide" },
     ],
   },
 
