@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
 import styles from "./Bonuses.module.css";
-import PlaceholderImage from "./PlaceholderImage";
 
 export default function Bonuses() {
   const { bonuses } = siteConfig;
@@ -13,7 +12,7 @@ export default function Bonuses() {
           {bonuses.items.map((bonus, i) => (
             <div key={i} className={styles.card}>
               <div className={styles.imageWrap}>
-                <PlaceholderImage label={bonus.title} aspect="square" />
+                <img src={bonus.image} alt={bonus.title} />
               </div>
               <div className={styles.content}>
                 <h3 className={styles.bonusTitle}>{bonus.title}</h3>

@@ -234,7 +234,7 @@ export const siteConfig = {
           "Watch your photo transform into a perfectly prepared print-ready version automatically",
           "Download instantly and send straight to your printer or local print shop",
         ],
-        image: "/images/bonus-wizard.jpg",
+        image: "/images/bonus-converter.png",
       },
       {
         title: "Bonus 2: The Perfect Photo Guide",
@@ -247,7 +247,7 @@ export const siteConfig = {
           "What to look for in your existing photos so you know which ones will work",
           "The one thing to avoid that most beginners miss",
         ],
-        image: "/images/bonus-guide.jpg",
+        image: "/images/bonus-guide.png",
       },
     ],
   },
