@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
 import styles from "./Stacking.module.css";
-import PlaceholderImage from "./PlaceholderImage";
 
 export default function Stacking() {
   const { stacking } = siteConfig;
@@ -10,7 +9,7 @@ export default function Stacking() {
       <div className="container">
         <h2 className={styles.headline}>{stacking.headline}</h2>
         <div className={styles.imageWrap}>
-          <PlaceholderImage label="Stacking Image" aspect="landscape" />
+          <img src={stacking.image} alt={stacking.imageAlt} />
         </div>
         <ul className={`check-list ${styles.list}`}>
           {stacking.items.map((item, i) => (
