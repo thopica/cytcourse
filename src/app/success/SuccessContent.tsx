@@ -91,10 +91,11 @@ export default function SuccessContent() {
     const currency = session.currency?.toUpperCase();
 
     if (typeof (window as any).fbq === "function") {
+      const eventId = `stripe_${session.id}`;
       (window as any).fbq("track", "Purchase", {
         value: amount,
         currency,
-      });
+      }, { eventID: eventId });
       window.sessionStorage.setItem(purchaseEventKey, "1");
     }
   }, [isPaid, session]);
