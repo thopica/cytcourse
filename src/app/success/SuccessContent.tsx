@@ -10,6 +10,8 @@ type CheckoutSessionState = {
   status: string | null;
   payment_status: string | null;
   customer_email: string | null;
+  amount_total?: number | null;
+  currency?: string | null;
 };
 
 export default function SuccessContent() {
@@ -71,6 +73,31 @@ export default function SuccessContent() {
 
     return session.status === "complete" && session.payment_status === "paid";
   }, [session]);
+
+  useEffect(() => {
+    if (!isPaid || !session?.id) {
+      return;
+    }
+
+    const purchaseEventKey = `meta_purchase_sent_${session.id}`;
+    const alreadySent = window.sessionStorage.getItem(purchaseEventKey);
+
+    if (alreadySent) {
+      return;
+    }
+
+    const amount =
+      typeof session.amount_total === "number" ? session.amount_total / 100 : undefined;
+    const currency = session.currency?.toUpperCase();
+
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Purchase", {
+        value: amount,
+        currency,
+      });
+      window.sessionStorage.setItem(purchaseEventKey, "1");
+    }
+  }, [isPaid, session]);
 
   return (
     <div className={styles.page}>

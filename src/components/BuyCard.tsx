@@ -22,6 +22,13 @@ export default function BuyCard() {
     setError(null);
 
     try {
+      if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+        (window as any).fbq("track", "InitiateCheckout", {
+          value: siteConfig.stripe.priceAmount / 100,
+          currency: siteConfig.stripe.currency.toUpperCase(),
+        });
+      }
+
       const previousSessionId = window.sessionStorage.getItem("checkout_session_id");
 
       if (previousSessionId) {
