@@ -1,0 +1,7 @@
+.wrap {
+  margin-bottom: var(--space-md);
+}
+
+.btn {
+  max-width: 320px;
+}

@@ -1,0 +1,47 @@
+.main {
+  padding: var(--section-padding);
+  min-height: 60vh;
+}
+
+.inner {
+  max-width: min(var(--max-width), 960px);
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  font-size: var(--size-subheading);
+  color: var(--color-text-light);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.toolSection {
+  margin-bottom: var(--space-xl);
+}
+
+.error {
+  color: var(--color-guarantee);
+  margin-bottom: var(--space-md);
+  font-size: var(--size-body);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

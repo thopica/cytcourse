@@ -16,6 +16,10 @@
   justify-content: space-between;
 }
 
+.innerLogoOnly {
+  justify-content: flex-start;
+}
+
 .logo {
   text-decoration: none;
   flex-shrink: 0;

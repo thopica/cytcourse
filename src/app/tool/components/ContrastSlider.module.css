@@ -1,0 +1,38 @@
+.wrap {
+  margin-bottom: var(--space-md);
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}
+
+.slider {
+  width: 100%;
+  max-width: 420px;
+  height: 8px;
+  accent-color: var(--color-cta);
+  cursor: pointer;
+}
+
+.slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.value {
+  display: inline-block;
+  margin-left: var(--space-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-light);
+  font-size: var(--size-small);
+}
+
+.hint {
+  font-size: var(--size-small);
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}

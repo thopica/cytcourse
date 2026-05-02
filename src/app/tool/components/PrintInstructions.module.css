@@ -1,0 +1,25 @@
+.section {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.heading {
+  font-size: var(--size-section-title);
+  margin-bottom: var(--space-md);
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: var(--color-text);
+  font-size: var(--size-body);
+}
+
+.list li {
+  margin-bottom: var(--space-sm);
+}
+
+.list li::marker {
+  color: var(--color-primary);
+}
