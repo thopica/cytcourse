@@ -57,10 +57,11 @@ export const siteConfig = {
   header: {
     logo: "/images/logo.png", // or null to use siteName as text
     navLinks: [
-      { label: "About", href: "#intro" },
-      { label: "Modules", href: "#modules" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "FAQ", href: "#faq" },
+      { label: "About", href: "/#intro" },
+      { label: "Modules", href: "/#modules" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Tool", href: "/tool" },
     ],
     ctaButton: {
       label: "Get Access",
