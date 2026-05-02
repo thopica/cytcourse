@@ -23,7 +23,7 @@ export async function POST() {
     const separator = baseSuccessUrl.includes("?") ? "&" : "?";
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      payment_method_types: ["card", "paypal"],
       mode: "payment",
       line_items: stripePriceId
         ? [
