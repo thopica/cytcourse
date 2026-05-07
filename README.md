@@ -19,6 +19,29 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
+## Member area (course videos & progress)
+
+The app includes a **Skool-style member portal** at `/login`, `/signup`, `/lessons`, and `/account`, backed by **Supabase Auth** and Postgres (see `supabase/migrations/` and `supabase/seed.sql`).
+
+### One-time Supabase setup
+
+1. Create a project at [supabase.com](https://supabase.com).
+2. In the SQL editor, run the migration file in `supabase/migrations/` (schema + RLS + `lessons_with_progress` view), then run `supabase/seed.sql`.
+3. **Auth → Providers → Email**: for v1, turn **off** “Confirm email” (or users will not get an immediate session after signup).
+4. **Auth → URL configuration**: set **Site URL** to `NEXT_PUBLIC_SITE_URL` (e.g. `http://localhost:3000` locally, production domain in Vercel). Under **Redirect URLs**, add:
+   - `http://localhost:3000/**` (local)
+   - `https://your-production-domain/**`
+   Include `/reset-password` so password recovery links work; PKCE recovery links use query params on that path.
+5. Copy **Project URL** and **anon** key into `.env.local` as `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Optionally keep `SUPABASE_SERVICE_ROLE_KEY` for future scripts only — never expose it in client code.
+
+### Swap YouTube IDs
+
+Seed data uses one **placeholder** YouTube video ID so embeds work in development. In Supabase, update each row in `public.lessons.youtube_id` to your real **unlisted** video IDs (or edit `supabase/seed.sql` and re-run inserts in a fresh dev database).
+
+### Vercel env vars (member area)
+
+Add the same `NEXT_PUBLIC_SUPABASE_*` variables (and keep `NEXT_PUBLIC_SITE_URL` aligned with your deployment URL). `SUPABASE_SERVICE_ROLE_KEY` is optional unless you run server-side admin scripts.
+
 ## How to Customize
 
 ### Change ALL content, pricing, colors
@@ -50,6 +73,8 @@ npx vercel
 ```
 
 **Environment variables to set in Vercel Dashboard:**
+- `NEXT_PUBLIC_SUPABASE_URL` — Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` — Supabase anon (public) key
 - `STRIPE_SECRET_KEY` — your live Stripe secret key (`sk_live_...`)
 - `NEXT_PUBLIC_SITE_URL` — your production URL (e.g. `https://yourdomain.com`)
 - `STRIPE_PRICE_ID` — your Stripe price ID (`price_...`, optional but recommended)
