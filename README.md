@@ -34,9 +34,9 @@ The app includes a **Skool-style member portal** at `/login`, `/signup`, `/lesso
    Include `/reset-password` so password recovery links work; PKCE recovery links use query params on that path.
 5. Copy **Project URL** and **anon** key into `.env.local` as `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Optionally keep `SUPABASE_SERVICE_ROLE_KEY` for future scripts only — never expose it in client code.
 
-### Swap YouTube IDs
+### Course videos
 
-Seed data uses one **placeholder** YouTube video ID so embeds work in development. In Supabase, update each row in `public.lessons.youtube_id` to your real **unlisted** video IDs (or edit `supabase/seed.sql` and re-run inserts in a fresh dev database).
+Lesson YouTube IDs live in `supabase/seed.sql` (Module 1 is two lessons: intro, then materials). For an existing database, run `supabase/migrations/20260522120000_lesson_youtube_ids.sql` in the Supabase SQL editor.
 
 ### Vercel env vars (member area)
 

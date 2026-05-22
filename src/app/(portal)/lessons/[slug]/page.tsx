@@ -26,6 +26,13 @@ export default async function LessonPage({ params }: { params: { slug: string } 
 
   const lesson = row as LessonWithProgressRow;
   const embed = `https://www.youtube.com/embed/${lesson.youtube_id}?rel=0`;
+  const contentAboveVideo = params.slug === "module-1-intro";
+
+  const markdown = lesson.content ? (
+    <div className="lesson-markdown space-y-4 text-member-text [&_a]:break-words [&_a]:text-member-primary [&_a]:underline [&_h2]:mt-6 [&_h2]:font-serif [&_h2]:text-xl [&_li]:mt-1 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6">
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{lesson.content}</ReactMarkdown>
+    </div>
+  ) : null;
 
   return (
     <article className="rounded-xl border border-member-border bg-member-white p-4 shadow-sm sm:p-6">
@@ -37,7 +44,11 @@ export default async function LessonPage({ params }: { params: { slug: string } 
         <LessonCompleteCheckbox lessonId={lesson.id} initialCompleted={lesson.is_completed} />
       </div>
 
-      <div className="mt-6 aspect-video w-full overflow-hidden rounded-xl bg-member-text/10 shadow-sm">
+      {contentAboveVideo && markdown ? (
+        <div className="mt-6 border-b border-member-border pb-8">{markdown}</div>
+      ) : null}
+
+      <div className={`${contentAboveVideo && markdown ? "mt-8" : "mt-6"} aspect-video w-full overflow-hidden rounded-xl bg-member-text/10 shadow-sm`}>
         <iframe
           title={lesson.title}
           src={embed}
@@ -53,10 +64,8 @@ export default async function LessonPage({ params }: { params: { slug: string } 
         isLast={!lesson.next_lesson_slug}
       />
 
-      {lesson.content ? (
-        <div className="lesson-markdown mt-10 space-y-4 border-t border-member-border pt-8 text-member-text [&_a]:break-words [&_a]:text-member-primary [&_a]:underline [&_h2]:mt-6 [&_h2]:font-serif [&_h2]:text-xl [&_li]:mt-1 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{lesson.content}</ReactMarkdown>
-        </div>
+      {!contentAboveVideo && markdown ? (
+        <div className="mt-10 border-t border-member-border pt-8">{markdown}</div>
       ) : null}
     </article>
   );
