@@ -27,11 +27,11 @@ The app includes a **Skool-style member portal** at `/login`, `/signup`, `/lesso
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. In the SQL editor, run the migration file in `supabase/migrations/` (schema + RLS + `lessons_with_progress` view), then run `supabase/seed.sql`.
-3. **Auth → Providers → Email**: for v1, turn **off** “Confirm email” (or users will not get an immediate session after signup).
+3. **Auth → Providers → Email**: turn **on** “Confirm email” for production (signup shows a “check your email” screen; users must click the link before logging in). For local dev only, you can turn it off to skip confirmation and go straight to `/lessons`.
 4. **Auth → URL configuration**: set **Site URL** to `NEXT_PUBLIC_SITE_URL` (e.g. `http://localhost:3000` locally, production domain in Vercel). Under **Redirect URLs**, add:
    - `http://localhost:3000/**` (local)
    - `https://your-production-domain/**`
-   Include `/reset-password` so password recovery links work; PKCE recovery links use query params on that path.
+   Include `/auth/callback` (email confirmation after signup) and `/reset-password` (password recovery; PKCE links use query params on that path).
 5. Copy **Project URL** and **anon** key into `.env.local` as `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Optionally keep `SUPABASE_SERVICE_ROLE_KEY` for future scripts only — never expose it in client code.
 
 ### Course videos

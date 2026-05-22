@@ -5,13 +5,23 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 
+type Step = "form" | "check-email";
+
+function authCallbackUrl(siteUrl: string) {
+  const base = siteUrl.replace(/\/$/, "");
+  return `${base}/auth/callback?next=/lessons`;
+}
+
 export function SignupForm() {
   const router = useRouter();
+  const [step, setStep] = useState<Step>("form");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [resendMessage, setResendMessage] = useState<string | null>(null);
+  const [resendLoading, setResendLoading] = useState(false);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,11 +37,12 @@ export function SignupForm() {
     setLoading(true);
     const supabase = createClient();
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
-    const { error: signError } = await supabase.auth.signUp({
-      email: email.trim(),
+    const trimmedEmail = email.trim();
+    const { data, error: signError } = await supabase.auth.signUp({
+      email: trimmedEmail,
       password,
       options: {
-        emailRedirectTo: siteUrl ? `${siteUrl.replace(/\/$/, "")}/lessons` : undefined,
+        emailRedirectTo: siteUrl ? authCallbackUrl(siteUrl) : undefined,
       },
     });
     setLoading(false);
@@ -39,8 +50,103 @@ export function SignupForm() {
       setError(signError.message);
       return;
     }
-    router.replace("/lessons");
-    router.refresh();
+    if (data.session) {
+      router.replace("/lessons");
+      router.refresh();
+      return;
+    }
+    setEmail(trimmedEmail);
+    setStep("check-email");
+  }
+
+  async function onResend() {
+    setResendMessage(null);
+    setError(null);
+    setResendLoading(true);
+    const supabase = createClient();
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+    const { error: resendError } = await supabase.auth.resend({
+      type: "signup",
+      email,
+      options: {
+        emailRedirectTo: siteUrl ? authCallbackUrl(siteUrl) : undefined,
+      },
+    });
+    setResendLoading(false);
+    if (resendError) {
+      setError(resendError.message);
+      return;
+    }
+    setResendMessage("Confirmation email sent again. Check your inbox.");
+  }
+
+  function onStartOver() {
+    setStep("form");
+    setPassword("");
+    setConfirm("");
+    setError(null);
+    setResendMessage(null);
+  }
+
+  if (step === "check-email") {
+    return (
+      <div className="flex flex-col gap-5" role="status">
+        <div className="rounded-lg bg-member-primaryLight px-4 py-3">
+          <h2 className="font-serif text-lg font-semibold text-member-primary">
+            Check your email to finish signing up
+          </h2>
+          <p className="mt-2 text-sm text-member-text">
+            We sent a confirmation link to{" "}
+            <strong className="break-all">{email}</strong>.
+          </p>
+        </div>
+
+        <ol className="list-decimal space-y-2 pl-5 text-sm text-member-text">
+          <li>Open the confirmation email we sent you</li>
+          <li>Click the link in that email</li>
+          <li>Come back here and log in</li>
+        </ol>
+
+        <p className="text-sm text-member-textMuted">
+          If you do not see the email within a few minutes, check your spam or promotions folder.
+        </p>
+
+        {error ? (
+          <p className="text-sm text-red-700" role="alert">
+            {error}
+          </p>
+        ) : null}
+        {resendMessage ? (
+          <p className="text-sm text-member-text" role="status">
+            {resendMessage}
+          </p>
+        ) : null}
+
+        <Link
+          href="/login"
+          className="inline-flex min-h-[48px] items-center justify-center rounded-lg bg-member-cta px-4 text-center font-semibold text-white transition-colors hover:bg-member-ctaHover"
+        >
+          Go to log in
+        </Link>
+
+        <button
+          type="button"
+          onClick={() => void onResend()}
+          disabled={resendLoading}
+          className="min-h-[44px] rounded-lg border border-member-border bg-member-white px-4 text-sm font-medium text-member-text transition-colors hover:bg-member-primaryLight disabled:opacity-60"
+        >
+          {resendLoading ? "Sending…" : "Resend confirmation email"}
+        </button>
+
+        <button
+          type="button"
+          onClick={onStartOver}
+          className="text-sm text-member-primary underline-offset-2 hover:underline"
+        >
+          Wrong email? Start over
+        </button>
+      </div>
+    );
   }
 
   return (
