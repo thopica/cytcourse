@@ -38,7 +38,7 @@ values
         3,
         'Module 3: Coating the Paper',
         'Mix the chemistry and coat your paper for a perfect exposure.',
-        '2-1YbhzWxmg',
+        'XbcMGsCVE6A',
         null,
         4,
         'module-4-exposure'
@@ -48,7 +48,7 @@ values
         4,
         'Module 4: Exposing in Sunlight',
         'Time the exposure right for a rich, deep blue print.',
-        'b2zra1T-qWw',
+        'VRu8dlkNd4g',
         E'## Exposure times\n\n- Bright sun: 5 to 10 minutes\n- Overcast: 20 to 40 minutes\n\nThe coated paper should turn a dark grey-bronze color when fully exposed.',
         5,
         'module-5-finishing'
@@ -58,7 +58,7 @@ values
         5,
         'Module 5: Washing & Framing',
         'Reveal the final image and frame it like a pro.',
-        'aNpL-iqCdxs',
+        'WosC-FTwo-U',
         E'## After washing\n\nLet the print dry flat for at least 24 hours before framing. The blue will deepen as it dries.\n\n## Recommended frames\n\n- 8x10 black wood frame (Amazon link)\n- Floating glass frame for a modern look',
         6,
         null
