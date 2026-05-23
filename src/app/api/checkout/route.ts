@@ -24,6 +24,7 @@ export async function POST() {
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card", "paypal"],
+      allow_promotion_codes: true,
       mode: "payment",
       line_items: stripePriceId
         ? [
