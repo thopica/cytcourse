@@ -36,55 +36,9 @@
   width: auto;
 }
 
-/* Burger */
-.burger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 110;
-}
-
-.burger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-text);
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-.burgerOpen span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.burgerOpen span:nth-child(2) {
-  opacity: 0;
-}
-.burgerOpen span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Nav */
+/* Nav — hidden on mobile, horizontal on desktop */
 .nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
-  background: var(--color-page-bg);
-  padding: 5rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  transition: right 0.3s ease;
-  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
-}
-
-.navOpen {
-  right: 0;
+  display: none;
 }
 
 .navLink {
@@ -115,18 +69,10 @@
 
 /* Desktop */
 @media (min-width: 768px) {
-  .burger {
-    display: none;
-  }
-
   .nav {
-    position: static;
-    width: auto;
-    height: auto;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
-    box-shadow: none;
     gap: 2rem;
   }
 
