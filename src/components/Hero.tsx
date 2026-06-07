@@ -12,6 +12,9 @@ export default function Hero() {
         <div className={styles.imageWrap}>
           <img src={hero.image} alt={hero.imageAlt} />
         </div>
+        {hero.imageCaption ? (
+          <p className={styles.caption}>{hero.imageCaption}</p>
+        ) : null}
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import styles from "./FinalCta.module.css";
 
 export default function FinalCta() {
-  const { pricing } = siteConfig;
+  const { pricing, finalCta } = siteConfig;
   const [loading, setLoading] = useState(false);
 
   async function handleCheckout() {
@@ -28,11 +28,8 @@ export default function FinalCta() {
   return (
     <section className={`section section--alt ${styles.cta}`}>
       <div className="container" style={{ textAlign: "center" }}>
-        <h2 className={styles.headline}>Ready to Build Your Dragon?</h2>
-        <p className={styles.sub}>
-          Join now and get instant access to all 5 modules, bonus materials,
-          and lifetime updates.
-        </p>
+        <h2 className={styles.headline}>{finalCta.headline}</h2>
+        <p className={styles.sub}>{finalCta.subheadline}</p>
         <div className={styles.priceRow}>
           <span className={styles.original}>{pricing.originalPrice}</span>
           <span className={styles.current}>{pricing.currentPrice}</span>
@@ -44,7 +41,7 @@ export default function FinalCta() {
         >
           {loading ? "Redirecting..." : pricing.ctaButton.label}
         </button>
-        <p className={styles.trust}>🔒 Secure checkout · 30-day money-back guarantee</p>
+        <p className={styles.trust}>Secure checkout · 30-day money-back guarantee</p>
       </div>
     </section>
   );

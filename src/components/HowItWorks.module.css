@@ -1,0 +1,47 @@
+.section {
+  background: var(--color-page-bg);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.step {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-size: var(--size-subheading);
+  color: var(--color-primary);
+  margin: 0 0 0.35rem;
+}
+
+.stepOutcome {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.55;
+}

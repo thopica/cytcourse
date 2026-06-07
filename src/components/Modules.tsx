@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import ExpandableList from "./ExpandableList";
 import styles from "./Modules.module.css";
 
 export default function Modules() {
@@ -17,11 +18,7 @@ export default function Modules() {
               </div>
               <div className={styles.content}>
                 <p className={styles.modSub}>{mod.subtitle}</p>
-                <ul className="check-list">
-                  {mod.bullets.map((b, j) => (
-                    <li key={j}>{b}</li>
-                  ))}
-                </ul>
+                <ExpandableList label="What's inside this module" items={mod.bullets} />
               </div>
             </div>
           ))}

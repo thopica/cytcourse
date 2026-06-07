@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import ProblemDigIn from "@/components/ProblemDigIn";
+import HowItWorks from "@/components/HowItWorks";
 import Creator from "@/components/Creator";
 import CourseIntro from "@/components/CourseIntro";
 import Modules from "@/components/Modules";
@@ -22,6 +23,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <ProblemDigIn />
+        <HowItWorks />
         <Creator />
         <CourseIntro />
         <Modules />
@@ -35,7 +37,7 @@ export default function Home() {
           </div>
         </section>
         <Faq />
-       
+        <FinalCta />
       </main>
       <Footer />
     </>

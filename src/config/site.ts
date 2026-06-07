@@ -64,31 +64,30 @@ export const siteConfig = {
       { label: "Tool", href: "/tool" },
     ],
     ctaButton: {
-      label: "Get Access",
+      label: "Start the Course",
       href: "#pricing",
     },
   },
 
   // ── HERO / ABOVE THE FOLD ──────────────────────────────
   hero: {
-    headline: "Turn a Photo of Your Dog Into a Stunning piece of Art",
-    subheadline: "Using nothing but sunlight and a few simple materials",
+    headline:
+      "Turn Your Dog's Photo Into a Frame-Worthy Blue Portrait — No Art Skills Needed",
+    subheadline:
+      "Step-by-step video course. Print at home with sunlight and a few simple materials. Includes a free tool that prepares your photo in 60 seconds.",
     image: "/images/hero.jpg",
-    imageAlt: "A woman smiling next to a paper dragon scene with volcano, castle and forest",
-    ctaButton: {
-      label: "Start Building Today",
-      href: "#pricing",
-    },
+    imageAlt: "Finished cyanotype dog portrait made with sunlight",
+    imageCaption: "Made from a phone photo and sunlight — no art background required.",
   },
 
   // ── INTRO / IMAGINE IF ─────────────────────────────────
   intro: {
     id: "intro",
-    headline: "Imagine if you could...",
+    headline: "Want a portrait of your dog that actually means something?",
     bullets: [
-      "...create a stunning portrait of your dog that looks like it came straight out of an art gallery using only sunlight and a few simple materials",
-      "...make something totally unique without needing any artistic skills, a camera, or a creative background",
-      "...create something so beautiful your friends won't believe you made it yourself",
+      "Hang it on your wall — a deep-blue portrait that looks like it belongs in a gallery, made by you",
+      "Use any phone photo — the free converter tool handles the technical prep in under a minute",
+      "Follow 5 short modules — from materials list to framed print, at your own pace",
     ],
   },
 
@@ -96,9 +95,8 @@ export const siteConfig = {
   problemDigIn: {
     id: "problem-dig-in",
     headline: "Why anyone can create a stunning dog portrait (yes, even on the first try):",
-    
-      
     paragraphs: [
+      'You saw a blue dog portrait and thought: "That looks incredible — but I could never make that."',
       "Let's be honest. At first glance, a portrait like this might look intimidating. Too artistic, too technical for a beginner. But in fact...",
       "It's surprisingly simple. Cyanotype is an art form from the 1800s that uses sunlight to create deep blue images on paper, fabric, or almost any surface.",
       "The materials are easy. Everything you need is on Amazon or in any craft store. Most of it you probably already have at home.",
@@ -118,7 +116,7 @@ export const siteConfig = {
     image: "/images/creator.jpg",
     imageAlt: "Thomas smiling at his dog portrait",
     paragraphs: [
-      "Hi, I'm Thomas! I'm the one behind this dog portrait and no, I did not start out as a photographer or an artist of any kind.",
+      "Hi, I'm Thomas. I'm not a photographer or an artist — I'm a dog person who accidentally discovered you can print photos with sunlight.",
       "One day I stumbled across something called Cyanotype. An art technique from the 1800s where you literally print images using sunlight.",
       "So I tried it. Just mixing, coating, exposing out of pure curiosity.",
       "And the moment I rinsed my first print and watched that deep blue portrait appear right in front of my eyes I was completely hooked.",
@@ -126,6 +124,26 @@ export const siteConfig = {
       "And what I discovered was: you don't need any artistic skill to create something that looks genuinely stunning.",
       "That's why this piece came to life. A way for dog lovers to capture everything they feel about their dog in one stunning portrait.",
       "If you've ever wanted to slow down and make something beautiful with your own hands, you've found the right spot.",
+    ],
+  },
+
+  // ── HOW IT WORKS ───────────────────────────────────────
+  howItWorks: {
+    id: "how-it-works",
+    headline: "How it works — 3 steps",
+    steps: [
+      {
+        title: "Pick a photo and prep it with the free tool",
+        outcome: "Print-ready negative in 60 seconds.",
+      },
+      {
+        title: "Coat paper and expose in sunlight",
+        outcome: "Your dog's image transfers to paper.",
+      },
+      {
+        title: "Rinse, dry, and frame",
+        outcome: "A finished portrait on your wall.",
+      },
     ],
   },
 
@@ -140,7 +158,7 @@ export const siteConfig = {
   // ── MODULES ────────────────────────────────────────────
   modules: {
     id: "modules",
-    headline: "This is everything you are getting:",
+    headline: "What's inside the course",
     items: [
       {
         title: "Module 1: Materials & Tools",
@@ -207,7 +225,7 @@ export const siteConfig = {
   // ── STACKING / WHAT YOU GET ────────────────────────────
   stacking: {
     id: "stacking",
-    headline: "This is everything you are getting:",
+    headline: "Your complete toolkit:",
     image: "/images/stacking-devices.jpg",
     imageAlt: "Everything included in the course",
     items: [
@@ -256,23 +274,19 @@ export const siteConfig = {
   // ── PRICING ────────────────────────────────────────────
   pricing: {
     id: "pricing",
-    headline: "Let's Talk Numbers.",
+    headline: "One payment. Lifetime access. Everything included.",
     paragraphs: [
-      "The regular course price is $97.",
-      "But that's not the price you'll be paying today.",
-      "The page you're seeing right now is a beta test. I'm not sure I can give my personal attention to more than 100 people who will buy this course.",
-      "And I want you to get results...",
-      "So I'll be giving you the course for a fraction of that price. Just for me to see if I can actually handle getting support tickets from 100 people. If I can then I'll just start selling it for $97.",
-      "But right now — I'm selling it for",
-      "$47.00",
-      "It’s a one-time payment.",
-      "Access to the course - forever.",
+      "The full course price is $97.",
+      "Your price today is $47 — launch pricing while I personally support every student.",
+      "One-time payment. No subscription. No hidden fees. No upsells.",
+      "You get all 5 modules, both bonuses, and the free photo converter tool.",
+      "You're covered by a 30-day money-back guarantee.",
     ],
     originalPrice: "$97",
     currentPrice: "$47",
     priceSubtext: "ONE-TIME PAYMENT. LIFETIME ACCESS FOREVER.",
     ctaButton: {
-      label: "»  Unlock Lifetime Access Now",
+      label: "Get Instant Access — $47",
     },
     trustBadges: ["Secure Payment", "PayPal", "Visa", "MasterCard", "Discover", "Amex"],
   },
@@ -303,6 +317,11 @@ export const siteConfig = {
           "Yes, it's a one-time purchase. No subscriptions. No hidden fees. No upsells. You get everything: the full course, all bonuses, lifetime access. All for $47.",
       },
       {
+        question: "How much do the materials cost?",
+        answer:
+          "Most of what you need costs under $30 in total, and a lot of it you may already have at home. Module 1 gives you the full shopping list with links — everything fits in a shoebox.",
+      },
+      {
         question: "Is it safe to pay online?",
         answer:
           "Yes, your payment is 100% secure. All transactions are processed using encrypted, industry-standard payment systems (like Stripe or PayPal), so your information stays protected. I never store your payment details, and you'll receive a confirmation email right after purchase.",
@@ -315,9 +334,21 @@ export const siteConfig = {
       {
         question: "What happens after I join?",
         answer:
-          "As soon as you check out, you'll get an email with your login and instant access to the full course, all five step-by-step modules, and all bonus materials. You can start folding your first tree or mountain within minutes.",
+          "As soon as you check out, you'll get an email with your login and instant access to the full course, all five step-by-step modules, and all bonus materials. You can start Module 1 and gather your materials within minutes.",
+      },
+      {
+        question: "I've never done anything like this. Is this really for beginners?",
+        answer:
+          "Yes. Module 1 is a complete materials list. The free photo tool handles the hardest technical step. You just follow the videos one module at a time.",
       },
     ],
+  },
+
+  // ── FINAL CTA ──────────────────────────────────────────
+  finalCta: {
+    headline: "Ready to make your dog's portrait?",
+    subheadline:
+      "Get instant access to all 5 modules, both bonuses, and the free photo tool.",
   },
 
   // ── FOOTER ─────────────────────────────────────────────

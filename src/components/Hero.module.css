@@ -23,6 +23,15 @@
   font-size: var(--size-subheading);
   color: var(--color-text-light);
   margin-bottom: 0;
+  max-width: 36rem;
+}
+
+.caption {
+  font-size: var(--size-small);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin: 0;
+  max-width: 28rem;
 }
 
 .imageWrap {
@@ -41,12 +50,10 @@
   .headline {
     max-width: none;
     font-size: 2rem;
-    white-space: nowrap;
   }
 
   .sub {
-    max-width: none;
-    white-space: nowrap;
+    max-width: 42rem;
   }
 
   .imageWrap {
